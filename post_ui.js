@@ -8,33 +8,33 @@ const loadPost = () => {
         })
 }
 
+// {
+//     "userId": 10,
+//     "id": 98,
+//     "title": "laboriosam dolor voluptates",
+//     "body": "doloremque ex facilis sit sint culpa\nsoluta assumenda eligendi non ut eius\nsequi ducimus vel quasi\nveritatis est dolores"
+// }
+
 const displayPosts = (posts) => {
-    // console.log(posts); 
 
-
-    // for (let i = 0; i < posts.length; i++) {
-    //     console.log(posts[i]); 
-    // }
-
-    // for (let post of posts) {
-    //     console.log(post); 
-    // }
-
-
-    // 1. get the container 
-    const postContainer = document.getElementById("post-container"); 
-    // console.log(postContainer); 
-
-
+    // 1. get the container and empty the container 
+    const postContainer = document.getElementById("post-container");
+    postContainer.innerH; TML = "" 
+    
     posts.forEach((post) => {
-        // console.log(post.title); 
+        // 2. create element 
 
-        // 2. create HTML element
-        const li = document.createElement("li"); 
-        li.innerText=post.title; 
-        // console.log(li); 
+        const postCard = document.createElement("div"); 
+        postCard.innerHTML = `
+        <div class="post-card">
+            <h2>${post.title}</h2>
+            <p>${post.body}</p>
+        </div>
+        `; 
 
-        // 3. add li into container 
-        postContainer.appendChild(li); 
-    })
-}
+        // 3. add to the container 
+        postContainer.append(postCard); 
+    }); 
+}; 
+
+loadPost(); 
