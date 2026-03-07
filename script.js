@@ -1,6 +1,6 @@
 console.log("Explore API"); 
 
-const person = {
+const person={
     name: "selim", 
     fruit: "dalim", 
     dish: "halim", 
@@ -8,14 +8,10 @@ const person = {
     isRich: false, 
     money: 34000, 
 }; 
-console.log(person); 
+console.log(person, typeof person); 
 
-// JSON -> JS object with notation 
-// JSON.stringify
 const personJSON = JSON.stringify(person); 
-console.log(personJSON); 
-console.log(typeof personJSON); 
+console.log(personJSON, typeof personJSON); 
 
-
-const parseJSON = JSON.parse(personJSON); 
+const parseJSON = JSON = JSON.parse(personJSON); 
 console.log(parseJSON); 
